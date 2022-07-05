@@ -1,7 +1,7 @@
 ## book review 
 <image src = "static/image.png"></image>
 - 이펙티브 타입스크립트
-- 내돈내산 개인 공부 및 리마인드 용
+- 개인 공부 및 리마인드 용
   
 
 ### prerequisite knowledge

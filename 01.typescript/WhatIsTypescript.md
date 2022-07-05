@@ -120,3 +120,22 @@ function asNumber(val : number | string) : number {
 -> 타입 정보를 유지할려면 ❓
 **태그된 유니온과 속성 체크 방법**
 **클래스**(타입 스크립트 타입 , 런타임 값 둘 다 제공)
+
+### 아이템 5
+**any type 지양하기**
+- any type은 안정성이 없음
+- any는 함수 시그니처를 무시
+- -  시그니처란:
+함수의 파라미터 타입이나 리턴 타입을 지정
+`contract`라고도 불림
+```typescript
+function calculateAge( birthDate : Date) : number {
+    //..
+}
+let birthDate : any = '1980-01-19'
+calculateAge(birthDate) // 정상
+// birthDate 매개변수는 date 타입이여야 하는데 any 타입을 사용하게 되면 함수의 시그니처를 무시하게 됨
+```
+- any 타입은 코드 리팩터링 때 버그를 감춤
+- any는 타입 설계를 감춤
+- any는 타입시스템의 신뢰도를 떨어트림
